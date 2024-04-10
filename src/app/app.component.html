@@ -55,8 +55,11 @@
     <th mat-header-cell *matHeaderCellDef></th>
     <td mat-cell *matCellDef="let person">
       <ng-container *ngIf="person.get('isEdit').value === false">
-        <button mat-raised-button color="danger" (click)="delete(person)">
+        <button mat-stroked-button color="danger" (click)="delete(person)">
           Delete
+        </button>
+        <button mat-stroked-button color="primary" (click)="edit(person)">
+          Edit
         </button>
       </ng-container>
     </td>

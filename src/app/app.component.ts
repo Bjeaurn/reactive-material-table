@@ -70,6 +70,9 @@ export class AppComponent {
     // Persist the bastard.
     person.get('isEdit')!.setValue(false);
     person.get('id')!.setValue(Math.round(Math.random() * 10)); // To prove a point it doesn't matter for the clientside handling of removals.
-    console.log(person);
+  }
+
+  edit(person: PersonFormGroup) {
+    person.get('isEdit')!.setValue(true);
   }
 }
